@@ -9,12 +9,12 @@ close all;
 %    pkg install -forge signal
 %    pkg install -forge communications 
 
-%% fortwnw ta packages 
-pkg load signal; 
-pkg load communications; 
+% fortwnw ta packages 
+% pkg load signal; 
+% pkg load communications; 
 
 
-%% Dimiourgia tou arxikou menu
+% Dimiourgia tou arxikou menu
 disp ('Hello! Welcome to Voice Gender Recognition system.');
 disp('Please enter a number between 1-3 ');%odigies ston xristi
 disp('For audio recording, press 1');
@@ -22,7 +22,7 @@ disp('For audio load, press 2');
 disp('For exit press 3');
 prompt = input ('Enter your preference (1,2,3): ', 's');
 
-%dimiourgia tou audio recording
+% dimiourgia tou audio recording
 if strcmpi (prompt, '1')
     fs = 8000;
     nbits = 16;
@@ -44,7 +44,7 @@ if strcmpi (prompt, '1')
 	disp('Plotting the waveform');%emfanizei to minima gia tin optikopoiissi
 
 	%thetw to y iso me tis parametrous tou recording
-  %gia na mporw na to optikopoihsw
+  % gia na mporw na to optikopoihsw
 	y = getaudiodata(recording);
 
 	%optikopoiisi
@@ -84,7 +84,7 @@ if strcmpi (prompt, '1')
 	fprintf("\n\nPress any key to close program!\n\n"); %emfanizw auto to minima
   pause();%pausi mexri na patithei kapoio koumpi
 
-%% fortwma arxeiou
+% fortwma arxeiou
 elseif strcmpi (prompt, '2')
 	%o xristsis prepei na eisagei to path pou exei topothetisei to arxeio
 	file_path = input("please enter the audio file path: (full path name + .wav)\n\n","s");
@@ -125,12 +125,12 @@ elseif strcmpi (prompt, '2')
 	fprintf("\n\nPress any key to close program!\n\n"); %emfanizw to minima ayto
   pause();%pausi mexri na patithei kapoio koumpi.
 
-%% eksodos apo to programma
+% eksodos apo to programma
 elseif strcmpi (prompt, '3')%an o xristis patisei 3
 	disp('Exiting...');%minima stin othoni
 	exit();%eksodos
 
-%akuri epilogi
+% akuri epilogi
 else 
 	disp('Invalid Input');
 endif
